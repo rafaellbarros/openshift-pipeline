@@ -4,8 +4,6 @@ metadata:
   labels:
     app: pipelines-hello-world-api
   name: pipelines-hello-world-api
-  annotations:
-    haproxy.router.openshift.io/hsts_header: max-age=0
 spec:
   port:
     targetPort: 8081
