@@ -1,7 +1,7 @@
 apiVersion: triggers.tekton.dev/v1beta1
 kind: Trigger
 metadata:
-  name: hello-world-prod-trigger
+  name: hello-world-trigger
 spec:
   serviceAccountName: pipeline
   interceptors:
@@ -17,7 +17,7 @@ spec:
   bindings:
     - ref: hello-world-app
   template:
-    ref: hello-world-prod-app
+    ref: hello-world-app
 ---
 apiVersion: v1
 kind: Secret

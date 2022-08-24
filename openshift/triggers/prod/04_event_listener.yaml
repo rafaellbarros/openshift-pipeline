@@ -1,8 +1,0 @@
-apiVersion: triggers.tekton.dev/v1beta1
-kind: EventListener
-metadata:
-  name: hello-world-prod-app
-spec:
-  serviceAccountName: pipeline
-  triggers:
-    - triggerRef: hello-world-prod-trigger
