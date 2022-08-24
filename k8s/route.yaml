@@ -8,7 +8,7 @@ metadata:
     haproxy.router.openshift.io/hsts_header: max-age=0
 spec:
   port:
-    targetPort: 8081
+    targetPort: 8081-tcp
   to:
     kind: Service
     name: pipelines-hello-world-api
