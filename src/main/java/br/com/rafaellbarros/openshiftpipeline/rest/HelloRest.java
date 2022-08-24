@@ -19,6 +19,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 public class HelloRest {
 
+    @GetMapping
+    public ResponseEntity<String> init() {
+        return ResponseEntity.ok("Hello World!");
+    }
+
     @GetMapping(path = "/world", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> world() {
         return ResponseEntity.ok("Hello World OpenShift Pipepline!");
