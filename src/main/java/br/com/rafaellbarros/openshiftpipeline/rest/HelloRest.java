@@ -27,6 +27,6 @@ public class HelloRest {
     @GetMapping(path = "/world/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> worldName(@PathVariable String name) {
         String reqName = name == null || name == "" ? "Xablau" : name;
-        return ResponseEntity.ok("Hello World OpenShift Pipepline " + reqName.toUpperCase()+ "!");
+        return ResponseEntity.ok("Hello World OpenShift Pipepline " + reqName.toUpperCase()+ "!!!");
     }
 }
