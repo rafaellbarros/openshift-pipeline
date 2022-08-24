@@ -17,7 +17,7 @@ spec:
   bindings:
     - ref: hello-world-app
   template:
-    ref: hello-world-app
+    - ref: hello-world-app
 ---
 apiVersion: v1
 kind: Secret
