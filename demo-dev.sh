@@ -27,8 +27,6 @@ sleep 3
 
 echo "###### Show Logs Pipeline ######"
 tkn pipeline logs -f
-echo "###### Show Route ######"
-oc get route pipelines-hello-world-api --template='http://{{.spec.host}}'
 
 echo "###### End ######"
 
