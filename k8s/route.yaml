@@ -8,7 +8,10 @@ metadata:
     haproxy.router.openshift.io/hsts_header: max-age=0
 spec:
   port:
-    targetPort: 8081-tcp
+    targetPort: 8081
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
   to:
     kind: Service
     name: pipelines-hello-world-api

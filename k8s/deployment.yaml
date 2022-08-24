@@ -19,7 +19,8 @@ spec:
           imagePullPolicy: Always
           name: pipelines-hello-world-api
           ports:
-            - containerPort: 8081
+            - name: http
+              containerPort: 8081
               protocol: TCP
           resources:
             limits:

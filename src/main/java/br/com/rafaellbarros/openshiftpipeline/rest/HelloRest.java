@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/hello")
+@RequestMapping("/")
 public class HelloRest {
 
     @GetMapping
@@ -24,12 +24,12 @@ public class HelloRest {
         return ResponseEntity.ok("Hello World!");
     }
 
-    @GetMapping(path = "/world", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = "/hello-world", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> world() {
         return ResponseEntity.ok("Hello World OpenShift Pipepline!");
     }
 
-    @GetMapping(path = "/world/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = "/hello-world/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> worldName(@PathVariable String name) {
         String reqName = name == null || name == "" ? "Xablau" : name;
         return ResponseEntity.ok("Hello World OpenShift Pipepline " + reqName.toUpperCase()+ "!!!");

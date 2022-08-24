@@ -7,8 +7,14 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-    - protocol: TCP
+    - name: port-8080
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+    - name: http-8081
+      protocol: TCP
       port: 8081
       targetPort: 8081
+  internalTrafficPolicy: Cluster
   selector:
     app: pipelines-hello-world-api
