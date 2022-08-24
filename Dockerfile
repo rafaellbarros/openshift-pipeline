@@ -12,6 +12,6 @@ RUN mvn package -Dmaven.test.skip=true
 FROM openjdk:11-jdk
 COPY --from=0 /build/target/openshift-pipeline-*.jar /app/target/app.jar
 
-EXPOSE 8080
-ENTRYPOINT [ "java", "-jar", "/app/target/app.jar", "--server.port=8080" ]
+EXPOSE 8081
+ENTRYPOINT [ "java", "-jar", "/app/target/app.jar", "--server.port=8081" ]
 
